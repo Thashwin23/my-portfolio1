@@ -53,7 +53,7 @@ const Sidebar = ({ activeSection }) => {
           </AnimatePresence>
         </div>
       </div>
-      <nav className="flex flex-col items-center md:items-center space-y-8 pt-10">
+      <nav className="flex flex-col items-center md:items-center space-y-8 pt-14">
         {navLinks.map((link) => {
           const isActive = activeSection === link.href.substring(1);
           return (
