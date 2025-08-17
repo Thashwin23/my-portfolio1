@@ -4,7 +4,7 @@ import { portfolioData } from "../data";
 
 const EducationEntry = ({ edu }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
 
   return (
     <div ref={ref} className="mb-10 ml-8">
@@ -23,12 +23,12 @@ const EducationEntry = ({ edu }) => {
         </svg>
       </span>
       <motion.div
-        initial={{ opacity: 0, x: -20 }}
+        initial={{ opacity: 0, x: -30 }}
         animate={{
           opacity: isInView ? 1 : 0,
-          x: isInView ? 0 : -20,
+          x: isInView ? 0 : -30,
         }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.1 }}
       >
         <h3 className="text-2xl font-semibold text-white">{edu.degree}</h3>
         <p className="text-lg font-normal text-slate-400">{edu.institution}</p>
@@ -39,7 +39,7 @@ const EducationEntry = ({ edu }) => {
 };
 
 const Education = () => (
-  <section id="education" className="py-20 bg-gray-800 text-white p-6">
+  <section id="education" className="py-10 bg-gray-800 text-white p-6">
     <h2 className="text-4xl font-bold mb-12 text-center md:text-left">
       Education
     </h2>

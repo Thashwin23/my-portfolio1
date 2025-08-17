@@ -24,9 +24,10 @@ const Sidebar = ({ activeSection }) => {
   const navLinks = [
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
+    { name: "Skills", href: "#skills" },
     { name: "Education", href: "#education" },
     { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
+
     { name: "Contact", href: "#contact" },
   ];
 
@@ -52,7 +53,7 @@ const Sidebar = ({ activeSection }) => {
           </AnimatePresence>
         </div>
       </div>
-      <nav className="flex flex-col items-center md:items-start space-y-6">
+      <nav className="flex flex-col items-center md:items-center space-y-8 pt-10">
         {navLinks.map((link) => {
           const isActive = activeSection === link.href.substring(1);
           return (
@@ -167,12 +168,12 @@ const Sidebar = ({ activeSection }) => {
           <NavContent />
         </div>
       </aside>
-      <header className="md:hidden bg-black bg-opacity-90 backdrop-blur-sm text-white sticky top-0 z-50 shadow-lg">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold text-blue-400">
+      <header className="md:hidden bg-gray-300 bg-opacity-30 backdrop-blur-sm text-white sticky top-0 z-50 shadow-lg">
+        <div className="container mx-auto px-6 py-4 flex justify-end items-center">
+          {/* <a href="#" className="text-2xl font-bold text-blue-400">
             {portfolioData.name.split(" ")[0]}
             <span className="text-white">.</span>
-          </a>
+          </a> */}
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
             className="focus:outline-none z-50"

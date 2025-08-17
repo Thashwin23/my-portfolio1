@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 import { portfolioData } from "../data";
 
 const Skills = () => (
-  <section id="skills" className="py-20 bg-gray-800 text-white w-full">
+  <section id="skills" className="py-5 pb-20 text-white w-full">
     <div className="container mx-auto px-6 lg:px-12">
-      <h2 className="text-4xl font-bold mb-12 text-center md:text-left">
+      <h2 className="text-4xl font-bold mb-12 text-center md:text-left pl-4">
         Technical Skills
       </h2>
       <div className="relative overflow-hidden group">
-        <div className="absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-gray-800 to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-gray-800 to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-gray-900 to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-gray-900 to-transparent z-10 pointer-events-none"></div>
         <motion.div
           className="flex"
           animate={{

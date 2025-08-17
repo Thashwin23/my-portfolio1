@@ -44,15 +44,18 @@ export default function App() {
         <div className="md:col-span-4">
           <Sidebar activeSection={activeSection} />
         </div>
-        <main className="md:col-span-8 md:col-start-5">
+        <main className="md:col-span-8 md:col-start-5 ">
           <Hero />
           <div className="container mx-auto px-6 lg:px-12">
             <About />
             <Experience />
+          </div>
+          <Skills />
+          <div className="container mx-auto px-6 lg:px-12">
             <Education />
             <Projects />
           </div>
-          <Skills />
+
           <div className="container mx-auto px-6 lg:px-12">
             <Contact />
           </div>

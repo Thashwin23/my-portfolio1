@@ -10,6 +10,7 @@ const Contact = () => {
     e.preventDefault();
     setStatus("Sending...");
 
+    // Correct code without quotes
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
