@@ -1,6 +1,4 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { portfolioData, GithubIcon } from "../data";
+import { GithubIcon, portfolioData } from "../data";
 
 const ProjectCard = ({ project }) => (
   <div className="relative h-[300px] w-full rounded-xl shadow-xl group overflow-hidden">

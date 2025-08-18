@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 import { portfolioData } from "../data";
 
 const Contact = () => {
