@@ -1,6 +1,20 @@
-import { FaGitAlt, FaNodeJs, FaReact } from "react-icons/fa";
+import {
+  FaCss3Alt,
+  FaGitAlt,
+  FaGithub,
+  FaHtml5,
+  FaNodeJs,
+  FaReact,
+} from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiAntdesign, SiExpress, SiMongodb, SiNextdotjs } from "react-icons/si";
+import {
+  SiAntdesign,
+  SiExpress,
+  SiMongodb,
+  SiNextdotjs,
+  SiTailwindcss,
+} from "react-icons/si";
+import { TbBrandTypescript } from "react-icons/tb";
 import { calculateExperience } from "./components/helpers/calculateExperience";
 
 export const portfolioData = {
@@ -59,42 +73,36 @@ export const portfolioData = {
   ],
   projects: [
     {
-      title: "Foodtech & E-commerce Platform",
+      title: "Coorg Villa Stay",
       description:
-        "A hyperlocal platform featuring a merchant dashboard, analytics, and real-time offer workflows with QR-based redemptions.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop",
-      tags: ["Next.js", "React", "Ant Design", "Tailwind CSS"],
-      sourceUrl: "https://github.com/Thashwin23/mer-dashboard",
+        "A serene homestay website for a Coorg villa, designed to showcase nearby tourist attractions and amenities. Built with a clean, responsive layout using HTML and CSS.",
+      imageUrl: "/assets/project1.png",
+      tags: ["HTML", "CSS"],
+      sourceUrl: "https://github.com/Thashwin23/CoorgVilla-Homestay-Website",
     },
     {
-      title: "Dairytech Distribution System",
+      title: "Recipe Finder",
       description:
-        "A large-scale management system with an admin dashboard for inventory, dealer workflows, and real-time reporting.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop",
-      tags: ["React", "AntV Charts", "API Integration", "Real-time"],
-      sourceUrl: "https://github.com/Thashwin23/Tenera-prod-front-fork",
-    },
-    {
-      title: "Power Supply Analytics Solution",
-      description:
-        "A conditional monitoring tool with equipment status visualization, geospatial mapping, and advanced analytics.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
-      tags: ["Next.js", "Mapbox", "Data Visualization", "REST APIs"],
-      sourceUrl: "https://github.com/Thashwin23",
+        "An interactive recipe search application that allows users to find recipes and view a detailed list of ingredients. Built with vanilla JavaScript, HTML, and CSS.",
+      imageUrl: "/assets/project2.png",
+      tags: ["JavaScript", "HTML", "CSS"],
+      sourceUrl: "https://github.com/Thashwin23/Recipe-List-Website",
     },
   ],
   skills: [
+    { name: "HTML", icon: <FaHtml5 className="w-12 h-12" /> },
+    { name: "CSS", icon: <FaCss3Alt className="w-12 h-12" /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss className="w-12 h-12" /> },
+    { name: "JavaScript", icon: <IoLogoJavascript className="w-12 h-12" /> },
     { name: "React", icon: <FaReact className="w-12 h-12" /> },
     { name: "Next.js", icon: <SiNextdotjs className="w-12 h-12" /> },
+    { name: "Ant Design", icon: <SiAntdesign className="w-12 h-12" /> },
     { name: "Node.js", icon: <FaNodeJs className="w-12 h-12" /> },
     { name: "Express", icon: <SiExpress className="w-12 h-12" /> },
     { name: "MongoDB", icon: <SiMongodb className="w-12 h-12" /> },
-    { name: "JavaScript", icon: <IoLogoJavascript className="w-12 h-12" /> },
-    { name: "Ant Design", icon: <SiAntdesign className="w-12 h-12" /> },
+    { name: "TypeScript", icon: <TbBrandTypescript className="w-12 h-12" /> },
     { name: "Git", icon: <FaGitAlt className="w-12 h-12" /> },
+    { name: "GitHub", icon: <FaGithub className="w-12 h-12" /> },
   ],
   contactImage: "/assets/contact.png",
 };
