@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
-import Sidebar from "./components/Sidebar";
-import Hero from "./components/Hero";
+import { useEffect, useState } from "react";
 import About from "./components/About";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Education from "./components/Education";
+import Experience from "./components/Experience";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import Sidebar from "./components/Sidebar";
+import Skills from "./components/Skills";
+import Comet from "./components/Spotlight";
+import MouseFollower from "./components/Spotlight";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -40,6 +42,7 @@ export default function App() {
 
   return (
     <div className="bg-gray-900 font-sans leading-normal tracking-tight">
+      <MouseFollower />
       <div className="md:grid md:grid-cols-12">
         <div className="md:col-span-4">
           <Sidebar activeSection={activeSection} />

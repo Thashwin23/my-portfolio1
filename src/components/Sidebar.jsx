@@ -166,23 +166,57 @@ const Sidebar = ({ activeSection }) => {
       </aside>
       <header className="md:hidden bg-gray-300 bg-opacity-30 backdrop-blur-sm text-white sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-6 py-4 flex justify-end items-center">
-          {/* <a href="#" className="text-2xl font-bold text-blue-400">
-            {portfolioData.name.split(" ")[0]}
-            <span className="text-white">.</span>
-          </a> */}
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
             className="focus:outline-none z-50"
           >
-            {isMobileMenuOpen ? <IoIosCloseCircleOutline /> : <IoMdMenu />}
+            {isMobileMenuOpen ? (
+              <IoIosCloseCircleOutline size={30} />
+            ) : (
+              <IoMdMenu size={30} />
+            )}
           </button>
         </div>
         <div
           className={`absolute top-0 left-0 w-full h-screen bg-black flex flex-col items-center justify-center space-y-8 transition-transform duration-300 ease-in-out ${
             isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
+          } overflow-hidden`}
         >
-          <nav className="flex flex-col items-center space-y-6">
+          {/* --- Animated Background --- */}
+          <div className="absolute inset-0 z-0">
+            <motion.div
+              className="absolute top-0 -left-12 w-72 h-72 bg-blue-500 rounded-full mix-blend-lighten filter blur-2xl opacity-20"
+              animate={{
+                x: [0, 20, 0, -20, 0],
+                y: [0, -20, 30, 20, 0],
+                scale: [1, 1.1, 1, 0.9, 1],
+                backgroundColor: ["#3b82f6", "#6366f1", "#0ea5e9", "#3b82f6"],
+              }}
+              transition={{
+                duration: 15,
+                repeat: Infinity,
+                repeatType: "mirror",
+              }}
+            />
+            <motion.div
+              className="absolute top-0 -right-4 w-72 h-72 bg-indigo-500 rounded-full mix-blend-lighten filter blur-2xl opacity-20"
+              animate={{
+                x: [0, -15, 0, 15, 0],
+                y: [0, 25, -10, -15, 0],
+                scale: [1, 0.9, 1, 1.1, 1],
+                backgroundColor: ["#6366f1", "#0ea5e9", "#3b82f6", "#6366f1"],
+              }}
+              transition={{
+                duration: 12,
+                repeat: Infinity,
+                repeatType: "mirror",
+                delay: 2,
+              }}
+            />
+          </div>
+
+          {/* --- Navigation Links --- */}
+          <nav className="flex flex-col items-center space-y-6 relative z-10">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -197,6 +231,34 @@ const Sidebar = ({ activeSection }) => {
               </a>
             ))}
           </nav>
+
+          {/* --- Social Icons --- */}
+          <div className="flex justify-center space-x-6 mb-4 mt-auto pb-8 relative z-10">
+            <a
+              href={portfolioData.socials.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
+            >
+              <FaGithub size={24} />
+            </a>
+            <a
+              href={portfolioData.socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
+            >
+              <FaLinkedin size={24} />
+            </a>
+            <a
+              href={portfolioData.socials.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
+            >
+              <FaTwitter size={24} />
+            </a>
+          </div>
         </div>
       </header>
     </>

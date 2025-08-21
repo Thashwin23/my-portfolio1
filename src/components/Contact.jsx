@@ -36,20 +36,20 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className=" bg-gray-900 text-white p-6 relative bg-contain bg-center"
+      className="py-20 bg-gray-900 text-white p-6 relative bg-cover bg-center"
       style={{ backgroundImage: `url(${portfolioData.contactImage})` }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/70 to-gray-900/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-gray-900/70"></div>
       <div className="relative container mx-auto flex flex-col lg:flex-row gap-10">
         <div className="lg:w-1/2 flex flex-col justify-center">
           <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
-          <p className="text-slate-300 text-lg mb-8">
+          <p className="text-slate-300 text-lg mb-8 lg:mb-0">
             Have a project in mind or just want to say hello? Feel free to send
             me a message.
           </p>
         </div>
-        <div className="lg:w-[52%]">
-          <div className="bg-black/40 backdrop-blur-lg p-6 rounded-lg  mb-8 pl-4">
+        <div className="lg:w-1/2">
+          <div className="bg-black/30 backdrop-blur-sm p-8 rounded-lg border border-slate-700">
             <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div>
                 <label
