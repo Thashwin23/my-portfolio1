@@ -8,6 +8,7 @@
 # testing
 /coverage
 .env
+src/data.js
 
 # production
 /build

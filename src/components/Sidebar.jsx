@@ -1,14 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import {
-  CloseIcon,
-  GithubIcon,
-  LinkedinIcon,
-  MenuIcon,
-  portfolioData,
-  TwitterIcon,
-} from "../data";
-import { scrollToSection } from "../helpers";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { IoIosCloseCircleOutline, IoMdMenu } from "react-icons/io";
+import { portfolioData } from "../data";
+import { scrollToSection } from "./helpers/scrollFunction";
+import { FaI } from "react-icons/fa6";
 
 const Sidebar = ({ activeSection }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -88,7 +84,7 @@ const Sidebar = ({ activeSection }) => {
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
           >
-            <GithubIcon />
+            <FaGithub size={24} />
           </a>
           <a
             href={portfolioData.socials.linkedin}
@@ -96,7 +92,7 @@ const Sidebar = ({ activeSection }) => {
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
           >
-            <LinkedinIcon />
+            <FaLinkedin size={24} />
           </a>
           <a
             href={portfolioData.socials.twitter}
@@ -104,7 +100,7 @@ const Sidebar = ({ activeSection }) => {
             rel="noopener noreferrer"
             className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
           >
-            <TwitterIcon />
+            <FaInstagram size={24} />
           </a>
         </div>
         <p className="text-slate-500 text-sm">
@@ -178,7 +174,7 @@ const Sidebar = ({ activeSection }) => {
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
             className="focus:outline-none z-50"
           >
-            {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
+            {isMobileMenuOpen ? <IoIosCloseCircleOutline /> : <IoMdMenu />}
           </button>
         </div>
         <div

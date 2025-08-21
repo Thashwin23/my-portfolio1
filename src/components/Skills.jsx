@@ -28,12 +28,12 @@ const Skills = () => (
                 className="flex-shrink-0 flex flex-col items-center justify-center space-y-3 w-40 group/item"
                 whileHover={{ y: -4, scale: 0.9 }}
               >
-                <div className="p-4 bg-slate-500 rounded-full transition-colors duration-300 group-hover/item:bg-blue-500">
+                <div className="p-4 bg-slate-700 rounded-full transition-colors duration-300 group-hover/item:bg-blue-500">
                   <div className="text-blue-400 transition-colors duration-300 group-hover/item:text-white">
                     {skill.icon}
                   </div>
                 </div>
-                <p className="text-lg font-medium text-slate-300 transition-colors duration-300 group-hover/item:text-white">
+                <p className="text-lg font-medium text-slate-300 transition-colors duration-300 group-hover/item:text-neutral-50">
                   {skill.name}
                 </p>
               </motion.div>

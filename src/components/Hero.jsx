@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { portfolioData } from "../data";
-import { scrollToSection } from "../helpers";
+import { scrollToSection } from "./helpers/scrollFunction";
 
 const Hero = () => {
   const name = portfolioData.name.split("");

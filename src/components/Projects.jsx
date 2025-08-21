@@ -1,4 +1,5 @@
 import { GithubIcon, portfolioData } from "../data";
+import { FaGithub } from "react-icons/fa";
 
 const ProjectCard = ({ project }) => (
   <div className="relative h-[300px] w-full rounded-xl shadow-xl group overflow-hidden">
@@ -30,7 +31,7 @@ const ProjectCard = ({ project }) => (
           rel="noopener noreferrer"
           className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700 transition-colors"
         >
-          <GithubIcon className="w-5 h-5" /> Source Code
+          <FaGithub className="w-5 h-5" /> Source Code
         </a>
       </div>
     </div>
