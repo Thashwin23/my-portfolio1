@@ -7,7 +7,6 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Sidebar from "./components/Sidebar";
 import Skills from "./components/Skills";
-import Comet from "./components/Spotlight";
 import MouseFollower from "./components/Spotlight";
 
 export default function App() {

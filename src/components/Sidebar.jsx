@@ -1,10 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoIosCloseCircleOutline, IoMdMenu } from "react-icons/io";
 import { portfolioData } from "../data";
 import { scrollToSection } from "./helpers/scrollFunction";
-import { FaI } from "react-icons/fa6";
 
 const Sidebar = ({ activeSection }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -178,14 +177,14 @@ const Sidebar = ({ activeSection }) => {
           </button>
         </div>
         <div
-          className={`absolute top-0 left-0 w-full h-screen bg-black flex flex-col items-center justify-center space-y-8 transition-transform duration-300 ease-in-out ${
+          className={`absolute top-0 left-0 w-full h-screen bg-zinc-950 flex flex-col items-center justify-center space-y-8 transition-transform duration-300 ease-in-out ${
             isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
           } overflow-hidden`}
         >
           {/* --- Animated Background --- */}
           <div className="absolute inset-0 z-0">
             <motion.div
-              className="absolute top-0 -left-12 w-72 h-72 bg-blue-500 rounded-full mix-blend-lighten filter blur-2xl opacity-20"
+              className="absolute top-0 -left-12 w-72 h-72 bg-blue-700 rounded-full mix-blend-lighten filter blur-2xl opacity-20"
               animate={{
                 x: [0, 20, 0, -20, 0],
                 y: [0, -20, 30, 20, 0],
@@ -196,10 +195,11 @@ const Sidebar = ({ activeSection }) => {
                 duration: 15,
                 repeat: Infinity,
                 repeatType: "mirror",
+                delay: 1,
               }}
             />
             <motion.div
-              className="absolute top-0 -right-4 w-72 h-72 bg-indigo-500 rounded-full mix-blend-lighten filter blur-2xl opacity-20"
+              className="absolute top-0 -right-4 w-72 h-72 bg-indigo-700 rounded-full mix-blend-lighten filter blur-2xl opacity-20"
               animate={{
                 x: [0, -15, 0, 15, 0],
                 y: [0, 25, -10, -15, 0],
@@ -216,7 +216,7 @@ const Sidebar = ({ activeSection }) => {
           </div>
 
           {/* --- Navigation Links --- */}
-          <nav className="flex flex-col items-center space-y-6 relative z-10">
+          <nav className="flex flex-col items-center space-y-8 relative z-10">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -233,7 +233,7 @@ const Sidebar = ({ activeSection }) => {
           </nav>
 
           {/* --- Social Icons --- */}
-          <div className="flex justify-center space-x-6 mb-4 mt-auto pb-8 relative z-10">
+          <div className="flex justify-center space-x-6 mb-4 mt-auto sm:mt-20 pb-8 relative z-10">
             <a
               href={portfolioData.socials.github}
               target="_blank"

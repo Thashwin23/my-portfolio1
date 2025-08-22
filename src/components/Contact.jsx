@@ -1,10 +1,13 @@
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { portfolioData } from "../data";
+import { motion, useInView } from "framer-motion";
 
 const Contact = () => {
   const form = useRef();
   const [status, setStatus] = useState("");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -35,18 +38,31 @@ const Contact = () => {
 
   return (
     <section
+      ref={ref}
       id="contact"
       className="py-20 bg-gray-900 text-white p-6 relative bg-cover bg-center"
       style={{ backgroundImage: `url(${portfolioData.contactImage})` }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-gray-900/70"></div>
+      <div className="absolute inset-0  border-none bg-gradient-to-r from-gray-900 via-gray-900/70 to-gray-900"></div>
       <div className="relative container mx-auto flex flex-col lg:flex-row gap-10">
-        <div className="lg:w-1/2 flex flex-col justify-center">
-          <h2 className="text-4xl font-bold mb-6">Get In Touch</h2>
-          <p className="text-slate-300 text-lg mb-8 lg:mb-0">
+        <div className="lg:w-1/2 flex flex-col justify-center z-999">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl font-bold mb-6"
+          >
+            Get In Touch
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-slate-300 text-lg mb-8 lg:mb-0"
+          >
             Have a project in mind or just want to say hello? Feel free to send
             me a message.
-          </p>
+          </motion.p>
         </div>
         <div className="lg:w-1/2">
           <div className="bg-black/30 backdrop-blur-sm p-8 rounded-lg border border-slate-700">

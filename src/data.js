@@ -75,7 +75,7 @@ export const portfolioData = {
     {
       title: "Coorg Villa Stay",
       description:
-        "A serene homestay website for a Coorg villa, designed to showcase nearby tourist attractions and amenities. Built with a clean, responsive layout using HTML and CSS.",
+        "A serene homestay website for a Coorg villa, designed to showcase tourist attractions and amenities. Built with a responsive layout using HTML and CSS.",
       imageUrl: "/assets/project1.png",
       tags: ["HTML", "CSS"],
       sourceUrl: "https://github.com/Thashwin23/CoorgVilla-Homestay-Website",

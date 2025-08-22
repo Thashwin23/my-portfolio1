@@ -20,7 +20,7 @@ const MouseFollower = () => {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-8 h-8 bg-blue-400 rounded-full pointer-events-none z-50"
+      className="fixed top-0 left-0 w-3 h-3 bg-blue-200 rounded-full pointer-events-none z-50"
       style={{
         boxShadow: "0 0 15px #3b82f6, 0 0 30px #3b82f6",
         translateX: "-50%",
@@ -30,7 +30,7 @@ const MouseFollower = () => {
       transition={{
         type: "spring",
         stiffness: 100,
-        damping: 20,
+        damping: 16,
         mass: 0.1,
       }}
     />
