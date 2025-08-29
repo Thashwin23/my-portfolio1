@@ -1,9 +1,21 @@
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { portfolioData } from "../data";
 import { scrollToSection } from "./helpers/scrollFunction";
+import Fireworks from "./FireWorks";
 
 const Hero = () => {
   const name = portfolioData.name.split("");
+
+  const [showFireworks, setShowFireworks] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
+
+  const handleDownloadClick = () => {
+    setShowFireworks(true);
+    setTimeout(() => setShowFireworks(false), 2000); // Animation lasts 1.5s, hide after 2s
+    setShowThankYou(true);
+    setTimeout(() => setShowThankYou(false), 4000); // Show message for 4s
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -67,11 +79,26 @@ const Hero = () => {
           <a
             href={portfolioData.cvPath}
             download
+            onClick={handleDownloadClick}
             className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Download CV
+            <Fireworks isActive={showFireworks} />
           </a>
         </motion.div>
+        <AnimatePresence>
+          {showThankYou && (
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{ duration: 0.5 }}
+              className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white px-6 py-3 rounded-lg shadow-lg border border-blue-500/50"
+            >
+              <p className="text-lg">Thank you for downloading my CV!</p>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
