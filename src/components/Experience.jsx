@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { portfolioData } from "../data";
 
 const Experience = () => (
-  <section id="experience" className="py-20 bg-gray-900 text-white p-6">
+  <section id="experience" className="py-20 bg-gray-900 text-white p-4">
     <h2 className="text-4xl font-bold mb-12 text-center md:text-left">
       Work Experience
     </h2>
-    <div className="relative border-l-2 border-blue-800 ml-4 md:ml-0">
+    <div className="relative border-l-2 border-blue-800  md:ml-0 px-2">
       {portfolioData.experience.map((job, index) => (
         <div key={index} className="mb-10 ml-8">
           <span className="absolute flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full -left-4 ring-8 ring-gray-900">
@@ -32,7 +32,7 @@ const Experience = () => (
           <p className="block mb-2 text-lg font-normal leading-none text-slate-400">
             {job.company}, {job.location}
           </p>
-          <ul className="list-disc list-inside mt-4 space-y-2 text-slate-300">
+          <ul className="list-outside list-disc mt-4 space-y-2 text-slate-300 text-justify">
             {job.description.map((point, i) => (
               <motion.li
                 key={i}

@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => (
       <h3 className="text-2xl font-bold text-white mb-2 transition-transform duration-700 ease-in-out transform group-hover:translate-y-[-210px]  md:group-hover:translate-y-[-190px]  lg:group-hover:translate-y-[-210px]">
         {project.title}
       </h3>
-      <div className="absolute bottom-0 left-0 w-full p-6 transition-all duration-700 ease-in-out transform translate-y-full opacity-0 group-hover:translate-y-1 sm:group-hover:translate-y-2 group-hover:opacity-100">
+      <div className="absolute bottom-0 left-0 w-full p-6 transition-all duration-700 ease-in-out transform translate-y-full opacity-0 group-hover:translate-y-1 sm:group-hover:translate-y-2 group-hover:opacity-100 text-justify">
         <p className="mb-2 text-lg text-slate-200">{project.description}</p>
         <div className="flex flex-wrap justify-center gap-2 my-2">
           {project.tags.map((tag) => (
