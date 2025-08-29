@@ -83,9 +83,14 @@ const Hero = () => {
             className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Download CV
-            <Fireworks isActive={showFireworks} />
+            <div className="hidden lg:block">
+              <Fireworks isActive={showFireworks} size="small" />
+            </div>
           </a>
         </motion.div>
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 lg:hidden">
+          <Fireworks isActive={showFireworks} size="large" />
+        </div>
         <AnimatePresence>
           {showThankYou && (
             <motion.div
@@ -93,9 +98,11 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 50 }}
               transition={{ duration: 0.5 }}
-              className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white px-6 py-3 rounded-lg shadow-lg border border-blue-500/50"
+              className="absolute top-10 left-1/4 lg:top-auto lg:bottom-10 lg:left-[60%] md:left-[40%] -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white px-6 py-3 rounded-lg shadow-lg border border-blue-500/50"
             >
-              <p className="text-lg">Thank you for downloading my CV!</p>
+              <p className="text-sm lg:text-lg">
+                Thank you for downloading my CV!
+              </p>
             </motion.div>
           )}
         </AnimatePresence>
