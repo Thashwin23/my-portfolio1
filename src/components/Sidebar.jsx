@@ -159,7 +159,7 @@ const Sidebar = ({ activeSection }) => {
           <NavContent />
         </div>
       </aside>
-      <header className="md:hidden bg-gray-600 bg-opacity-30 backdrop-blur-sm text-white sticky top-0 z-50 shadow-lg">
+      <header className="md:hidden bg-[#f7d6aa] bg-opacity-40 backdrop-blur-sm text-white sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-6 py-4 flex justify-end items-center">
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
