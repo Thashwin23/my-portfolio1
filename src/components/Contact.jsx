@@ -79,7 +79,7 @@ const Contact = () => {
                   name="user_name"
                   id="user_name"
                   required
-                  className="w-full bg-slate-800 border-2 border-slate-700 rounded-lg py-3 px-4 focus:outline-none focus:border-blue-500 transition-colors duration-300"
+                  className="w-full bg-slate-800 border-2 border-slate-700 rounded-lg py-3 px-4 focus:outline-none focus:border-[#bba074] transition-colors duration-300"
                 />
               </div>
               <div>
@@ -94,7 +94,7 @@ const Contact = () => {
                   name="user_email"
                   id="user_email"
                   required
-                  className="w-full bg-slate-800 border-2 border-slate-700 rounded-lg py-3 px-4 focus:outline-none focus:border-blue-500 transition-colors duration-300"
+                  className="w-full bg-slate-800 border-2 border-slate-700 rounded-lg py-3 px-4 focus:outline-none focus:border-[#a58b61] transition-colors duration-300"
                 />
               </div>
               <div>
@@ -109,7 +109,7 @@ const Contact = () => {
                   id="message"
                   rows="5"
                   required
-                  className="w-full bg-slate-800 border-2 border-slate-700 rounded-lg py-3 px-4 focus:outline-none focus:border-blue-500 transition-colors duration-300"
+                  className="w-full bg-slate-800 border-2 border-slate-700 rounded-lg py-3 px-4 focus:outline-none focus:border-[#a58b61] transition-colors duration-300"
                 ></textarea>
               </div>
               <div className="text-left">
