@@ -6,10 +6,10 @@ const Experience = () => (
     <h2 className="text-4xl font-bold mb-12 text-center md:text-left">
       Work Experience
     </h2>
-    <div className="relative border-l-2 border-blue-800  md:ml-0 px-2">
+    <div className="relative border-l-2 border-[#6e5326]  md:ml-0 px-2">
       {portfolioData.experience.map((job, index) => (
         <div key={index} className="mb-10 ml-8">
-          <span className="absolute flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full -left-4 ring-8 ring-gray-900">
+          <span className="absolute flex items-center justify-center w-8 h-8 bg-[#e7c081] rounded-full -left-4 ring-8 ring-gray-900">
             <svg
               className="w-4 h-4 text-white"
               fill="currentColor"
@@ -25,7 +25,7 @@ const Experience = () => (
           </span>
           <h3 className="flex items-center mb-1 text-2xl font-semibold text-white">
             {job.role}
-            <span className="text-blue-400 bg-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3">
+            <span className="text-[#bd9659] bg-gray-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3">
               {job.dates}
             </span>
           </h3>

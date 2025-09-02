@@ -36,11 +36,19 @@ const Hero = () => {
     <section
       id="hero"
       className="min-h-screen flex items-center justify-center bg-gray-900 text-white p-6 relative overflow-hidden bg-cover bg-center "
-      style={{
-        backgroundImage: "url('/assets/generated-image.png')",
-      }}
+      // style={{
+      //   backgroundImage: "url('/assets/generated-image.png')",
+      // }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-700/80 to-gray-900"></div>
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/assets/generated-video.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      <div className="absolute  inset-0 bg-gradient-to-r from-gray-800 via-gray-900/70 to-gray-900"></div>
       <div className="max-w-4xl z-10 text-center">
         <motion.h1
           className="text-5xl md:text-7xl font-extrabold leading-tight mb-4 font-['Orbitron']"
@@ -72,7 +80,7 @@ const Hero = () => {
           <a
             href="#projects"
             onClick={(e) => scrollToSection(e, "#projects")}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-600/30"
+            className="bg-[#a58b61] hover:bg-[#a58b61] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg shadow-[#a58b61]/30"
           >
             View My Work
           </a>
@@ -80,7 +88,7 @@ const Hero = () => {
             href={portfolioData.cvPath}
             download
             onClick={handleDownloadClick}
-            className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="border-2 border-[#a58b61] text-[#f2f2f2] hover:text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Download CV
             <div className="hidden lg:block">

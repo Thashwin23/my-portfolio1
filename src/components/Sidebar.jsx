@@ -34,7 +34,7 @@ const Sidebar = ({ activeSection }) => {
             {portfolioData.name}
           </h1>
         </a>
-        <div className="text-lg text-blue-400 mb-6 relative z-10 h-8">
+        <div className="text-lg text-[rgb(219,189,133)] mb-6 relative z-10 h-8">
           <AnimatePresence mode="wait">
             <motion.p
               key={roleIndex}
@@ -61,13 +61,13 @@ const Sidebar = ({ activeSection }) => {
               }}
               className={`text-xl transition-colors duration-300 relative group ${
                 isActive
-                  ? "text-blue-400 font-bold"
-                  : "text-slate-300 hover:text-blue-400"
+                  ? "text-[#dbbd85] font-bold"
+                  : "text-slate-300  hover:text-[#dbbd85]"
               }`}
             >
               <span>{link.name}</span>
               <span
-                className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full ${
+                className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-[#dbbd85] transition-all duration-300 group-hover:w-full ${
                   isActive ? "w-full" : ""
                 }`}
               ></span>
@@ -81,7 +81,7 @@ const Sidebar = ({ activeSection }) => {
             href={portfolioData.socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
+            className="text-slate-500  hover:text-[rgb(219,189,133)] transition-colors duration-300"
           >
             <FaGithub size={24} />
           </a>
@@ -89,7 +89,7 @@ const Sidebar = ({ activeSection }) => {
             href={portfolioData.socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
+            className="text-slate-500  hover:text-[rgb(219,189,133)] transition-colors duration-300"
           >
             <FaLinkedin size={24} />
           </a>
@@ -97,7 +97,7 @@ const Sidebar = ({ activeSection }) => {
             href={portfolioData.socials.twitter}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
+            className="text-slate-500  hover:text-[rgb(219,189,133)] transition-colors duration-300"
           >
             <FaInstagram size={24} />
           </a>
@@ -114,26 +114,17 @@ const Sidebar = ({ activeSection }) => {
       <aside className="hidden md:flex md:flex-col h-screen bg-black text-white p-8 fixed top-0 left-0 md:w-1/3 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <motion.div
-            className="absolute top-0 -left-12 w-72 h-72 bg-blue-500 rounded-full mix-blend-lighten filter blur-2xl opacity-25"
-            animate={{
-              x: [0, 20, 0, -20, 0],
-              y: [0, -20, 30, 20, 0],
-              scale: [0.7, 0.9, 0.9, 1.2, 0.8],
-              backgroundColor: ["#3b82f6", "#6366f1", "#0ea5e9", "#3b82f6"],
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              repeatType: "mirror",
-            }}
-          />
-          <motion.div
-            className="absolute top-0 -right-4 w-52 h-52 bg-indigo-500 rounded-full mix-blend-lighten filter blur-2xl opacity-30"
+            className="absolute bottom-5 left-10 w-52 h-52 bg-[#e7d6b9] rounded-full mix-blend-lighten filter blur-2xl opacity-20"
             animate={{
               x: [0, -15, 0, 15, 0],
               y: [0, 30, -10, -20, 0],
               scale: [0.6, 0.9, 0.9, 1.2, 0.8],
-              backgroundColor: ["#6366f1", "#0ea5e9", "#3b82f6", "#6366f1"],
+              backgroundColor: [
+                "#DE752A",
+                "#CBF065",
+                "#A53CC2",
+                "#18A2E7", // Back to soft gold
+              ],
             }}
             transition={{
               duration: 12,
@@ -144,12 +135,17 @@ const Sidebar = ({ activeSection }) => {
           />
 
           <motion.div
-            className="absolute bottom-5 left-10 w-52 h-52 bg-indigo-500 rounded-full mix-blend-lighten filter blur-2xl opacity-20"
+            className="absolute top-0 -right-4  w-52 h-52 bg-indigo-500 rounded-full mix-blend-lighten filter blur-2xl opacity-20"
             animate={{
               x: [0, -15, 0, 15, 0],
               y: [0, 25, -10, -15, 0],
               scale: [0.7, 0.9, 0.9, 1.2, 0.8],
-              backgroundColor: ["#6366f1", "#0ea5e9", "#3b82f6", "#6366f1"],
+              backgroundColor: [
+                "#BD1430",
+                "#F7B711",
+                "#8A24E3",
+                "#448018", // Back to soft gold
+              ],
             }}
             transition={{
               duration: 10,
@@ -163,7 +159,7 @@ const Sidebar = ({ activeSection }) => {
           <NavContent />
         </div>
       </aside>
-      <header className="md:hidden bg-gray-300 bg-opacity-30 backdrop-blur-sm text-white sticky top-0 z-50 shadow-lg">
+      <header className="md:hidden bg-gray-600 bg-opacity-30 backdrop-blur-sm text-white sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-6 py-4 flex justify-end items-center">
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
@@ -184,30 +180,41 @@ const Sidebar = ({ activeSection }) => {
           {/* --- Animated Background --- */}
           <div className="absolute inset-0 z-0">
             <motion.div
-              className="absolute top-0 -left-12 w-72 h-72 bg-blue-700 rounded-full mix-blend-lighten filter blur-2xl opacity-20"
-              animate={{
-                x: [0, 20, 0, -20, 0],
-                y: [0, -20, 30, 20, 0],
-                scale: [1, 1.1, 1, 0.9, 1],
-                backgroundColor: ["#3b82f6", "#6366f1", "#0ea5e9", "#3b82f6"],
-              }}
-              transition={{
-                duration: 15,
-                repeat: Infinity,
-                repeatType: "mirror",
-                delay: 1,
-              }}
-            />
-            <motion.div
-              className="absolute top-0 -right-4 w-72 h-72 bg-indigo-700 rounded-full mix-blend-lighten filter blur-2xl opacity-20"
+              className="absolute bottom-5 left-10 w-52 h-52 bg-[#e7d6b9] rounded-full mix-blend-lighten filter blur-2xl opacity-20"
               animate={{
                 x: [0, -15, 0, 15, 0],
-                y: [0, 25, -10, -15, 0],
-                scale: [1, 0.9, 1, 1.1, 1],
-                backgroundColor: ["#6366f1", "#0ea5e9", "#3b82f6", "#6366f1"],
+                y: [0, 30, -10, -20, 0],
+                scale: [0.6, 0.9, 0.9, 1.2, 0.8],
+                backgroundColor: [
+                  "#DE752A",
+                  "#CBF065",
+                  "#A53CC2",
+                  "#18A2E7", // Back to soft gold
+                ],
               }}
               transition={{
                 duration: 12,
+                repeat: Infinity,
+                repeatType: "mirror",
+                delay: 2,
+              }}
+            />
+
+            <motion.div
+              className="absolute top-0 -right-4  w-52 h-52 bg-indigo-500 rounded-full mix-blend-lighten filter blur-2xl opacity-20"
+              animate={{
+                x: [0, -15, 0, 15, 0],
+                y: [0, 25, -10, -15, 0],
+                scale: [0.7, 0.9, 0.9, 1.2, 0.8],
+                backgroundColor: [
+                  "#BD1430",
+                  "#F7B711",
+                  "#8A24E3",
+                  "#448018", // Back to soft gold
+                ],
+              }}
+              transition={{
+                duration: 10,
                 repeat: Infinity,
                 repeatType: "mirror",
                 delay: 2,
@@ -225,7 +232,7 @@ const Sidebar = ({ activeSection }) => {
                   scrollToSection(e, link.href);
                   setMobileMenuOpen(false);
                 }}
-                className="text-2xl hover:text-blue-400 transition-colors duration-300"
+                className="text-2xl hover:text-[#E5C07B] transition-colors duration-300"
               >
                 {link.name}
               </a>
@@ -238,7 +245,7 @@ const Sidebar = ({ activeSection }) => {
               href={portfolioData.socials.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
+              className="text-slate-500 hover:text-[#ebce98] transition-colors duration-300"
             >
               <FaGithub size={24} />
             </a>
@@ -246,7 +253,7 @@ const Sidebar = ({ activeSection }) => {
               href={portfolioData.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
+              className="text-slate-500 hover:text-[#ebce98] transition-colors duration-300"
             >
               <FaLinkedin size={24} />
             </a>
@@ -254,7 +261,7 @@ const Sidebar = ({ activeSection }) => {
               href={portfolioData.socials.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
+              className="text-slate-500 hover:text-[#ebce98] transition-colors duration-300"
             >
               <FaTwitter size={24} />
             </a>

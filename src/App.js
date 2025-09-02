@@ -40,7 +40,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-gray-900 font-sans leading-normal tracking-tight">
+    <div className="bg-gray-900 font-body leading-tight tracking-tight">
       <MouseFollower />
       <div className="md:grid md:grid-cols-12">
         <div className="md:col-span-4">

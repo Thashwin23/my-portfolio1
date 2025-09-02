@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Fireworks = ({ isActive }) => {
   const particleCount = 50;
-  const colors = ["#3b82f6", "#6366f1", "#0ea5e9", "#ffffff"];
+  const colors = ["#e7c081", "#6366f1", "#b559eb", "#ffffff"];
 
   if (!isActive) return null;
 

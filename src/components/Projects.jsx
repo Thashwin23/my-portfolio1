@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => (
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="bg-slate-700 text-blue-400 text-xs font-semibold px-2.5 py-1 rounded-full"
+              className="bg-slate-700 text-[#daae69] text-xs font-semibold px-2.5 py-1 rounded-full"
             >
               {tag}
             </span>
@@ -29,7 +29,7 @@ const ProjectCard = ({ project }) => (
           href={project.sourceUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700 transition-colors"
+          className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#a58b61] px-4 py-2 font-semibold text-white hover:bg-[#e4ad54] transition-colors"
         >
           <FaGithub className="w-5 h-5" /> Source Code
         </a>
