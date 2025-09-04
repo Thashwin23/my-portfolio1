@@ -48,7 +48,7 @@ const Hero = () => {
         muted
         playsInline
       />
-      <div className="absolute  inset-0 bg-gradient-to-r from-gray-800 via-gray-900/70 to-gray-900"></div>
+      <div className="absolute  inset-0 bg-gradient-to-r from-[#021522] via-zinc-900/80 to-[#000612]"></div>
       <div className="max-w-4xl z-10 text-center">
         <motion.h1
           className="text-5xl md:text-7xl font-extrabold leading-tight mb-4 font-['Orbitron']"

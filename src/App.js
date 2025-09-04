@@ -40,25 +40,24 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-gray-900 font-body leading-tight tracking-tight">
+    <div className="bg-gray-900 font-body leading-tight tracking-wide">
       <MouseFollower />
       <div className="md:grid md:grid-cols-12">
-        <div className="md:col-span-4">
+        <div className="md:col-span-3">
           <Sidebar activeSection={activeSection} />
         </div>
-        <main className="md:col-span-8 md:col-start-5 ">
+        <main className="md:col-span-9 z-12">
           <Hero />
-          <div className="container mx-auto px-6 lg:px-12">
+          <div className="container  px-6 lg:px-6">
             <About />
             <Experience />
           </div>
           <Skills />
-          <div className="container mx-auto px-6 lg:px-12">
+          <div className="container  px-6 lg:px-6">
             <Education />
             <Projects />
           </div>
-
-          <div className="container mx-auto px-6 lg:px-12">
+          <div className="container  px-6 lg:px-6">
             <Contact />
           </div>
         </main>

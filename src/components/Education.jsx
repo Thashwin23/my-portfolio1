@@ -8,7 +8,7 @@ const EducationEntry = ({ edu }) => {
 
   return (
     <div ref={ref} className="mb-10 ml-8">
-      <span className="absolute flex items-center justify-center w-8 h-8 bg-[#ac8952] rounded-full -left-4 ring-8 ring-gray-800">
+      <span className="absolute flex items-center justify-center w-8 h-8 bg-[#ac8952] rounded-full -left-4 ring-8 ring-gray-900">
         <svg
           className="w-4 h-4 text-white"
           fill="currentColor"
@@ -32,18 +32,18 @@ const EducationEntry = ({ edu }) => {
       >
         <h3 className="text-2xl font-semibold text-white">{edu.degree}</h3>
         <p className="text-lg font-normal text-slate-400">{edu.institution}</p>
-        <p className="text-lg font-semibold text-[#ac8952]">{edu.score}</p>
+        <p className="text-lg font-semibold text-[#c7a56f]">{edu.score}</p>
       </motion.div>
     </div>
   );
 };
 
 const Education = () => (
-  <section id="education" className="py-10 bg-gray-800 text-white p-6">
+  <section id="education" className="py-10 bg-[#2f2e2e] text-white p-6">
     <h2 className="text-4xl font-bold mb-12 text-center md:text-left">
       Education
     </h2>
-    <div className="relative border-l-2 border-[#6e5326] ml-4 md:ml-0">
+    <div className="relative border-l-2 border-[#6e5326] ml-4 md:ml-4">
       {portfolioData.education.map((edu, index) => (
         <EducationEntry key={index} edu={edu} />
       ))}

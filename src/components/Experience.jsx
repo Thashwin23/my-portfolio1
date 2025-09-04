@@ -29,10 +29,10 @@ const Experience = () => (
               {job.dates}
             </span>
           </h3>
-          <p className="block mb-2 text-lg font-normal leading-none text-slate-400">
+          <p className="block mb-2 text-lg font-normal leading-normal text-slate-400">
             {job.company}, {job.location}
           </p>
-          <ul className="list-outside list-disc mt-4 space-y-2 text-slate-300 text-justify">
+          <ul className="list-outside list-disc mt-4 space-y-2 text-slate-300 text-justify text-base">
             {job.description.map((point, i) => (
               <motion.li
                 key={i}

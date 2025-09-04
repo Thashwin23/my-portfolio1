@@ -45,7 +45,7 @@ const Contact = () => {
     >
       <div className="absolute inset-0  border-none bg-gradient-to-r from-gray-900 via-gray-900/70 to-gray-900"></div>
       <div className="relative container mx-auto flex flex-col lg:flex-row gap-10">
-        <div className="lg:w-1/2 flex flex-col justify-center z-999">
+        <div className="lg:w-1/2 flex flex-col justify-center md:mb-56 z-999">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}

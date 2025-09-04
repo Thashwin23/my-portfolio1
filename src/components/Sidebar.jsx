@@ -48,7 +48,7 @@ const Sidebar = ({ activeSection }) => {
           </AnimatePresence>
         </div>
       </div>
-      <nav className="flex flex-col items-center md:items-center space-y-8 pt-14">
+      <nav className="flex flex-col items-center space-y-8 pt-14">
         {navLinks.map((link) => {
           const isActive = activeSection === link.href.substring(1);
           return (
@@ -111,7 +111,7 @@ const Sidebar = ({ activeSection }) => {
 
   return (
     <>
-      <aside className="hidden md:flex md:flex-col h-screen bg-black text-white p-8 fixed top-0 left-0 md:w-1/3 overflow-hidden">
+      <aside className="hidden md:flex md:flex-col h-screen bg-black text-white p-8 fixed top-0 left-0 md:w-[25%] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <motion.div
             className="absolute bottom-5 left-10 w-52 h-52 bg-[#e7d6b9] rounded-full mix-blend-lighten filter blur-2xl opacity-20"
@@ -223,7 +223,7 @@ const Sidebar = ({ activeSection }) => {
           </div>
 
           {/* --- Navigation Links --- */}
-          <nav className="flex flex-col items-center space-y-8 relative z-10">
+          <nav className="flex flex-col items-center mb-10 space-y-8 relative z-10">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -232,7 +232,7 @@ const Sidebar = ({ activeSection }) => {
                   scrollToSection(e, link.href);
                   setMobileMenuOpen(false);
                 }}
-                className="text-2xl hover:text-[#E5C07B] transition-colors duration-300"
+                className="text-lg text-slate-300 hover:text-[#E5C07B] transition-colors duration-300"
               >
                 {link.name}
               </a>
@@ -240,7 +240,7 @@ const Sidebar = ({ activeSection }) => {
           </nav>
 
           {/* --- Social Icons --- */}
-          <div className="flex justify-center space-x-6 mb-4 mt-auto sm:mt-20 pb-8 relative z-10">
+          <div className="flex justify-center space-x-6 relative z-10">
             <a
               href={portfolioData.socials.github}
               target="_blank"
