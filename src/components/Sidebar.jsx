@@ -8,11 +8,34 @@ import { scrollToSection } from "./helpers/scrollFunction";
 const Sidebar = ({ activeSection }) => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [roleIndex, setRoleIndex] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setRoleIndex((prevIndex) => (prevIndex + 1) % portfolioData.roles.length);
     }, 5000); // Change role every 2 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  // --- Scroll Progress Logic ---
+  const handleScroll = () => {
+    const totalScroll =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const currentScroll = window.scrollY;
+    const progress = (currentScroll / totalScroll) * 100;
+    setScrollProgress(progress);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // --- Role Cycling Logic ---
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRoleIndex((prevIndex) => (prevIndex + 1) % portfolioData.roles.length);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -112,6 +135,13 @@ const Sidebar = ({ activeSection }) => {
   return (
     <>
       <aside className="hidden md:flex md:flex-col h-screen bg-black text-white p-8 fixed top-0 left-0 md:w-[25%] overflow-hidden">
+        {/* --- Scroll Progress Bar --- */}
+        <div className="absolute top-0 right-0 h-full w-1 bg-gray-800">
+          <motion.div
+            className="w-full bg-[#917b3a]"
+            style={{ height: `${scrollProgress}%` }}
+          />
+        </div>
         <div className="absolute inset-0 z-0">
           <motion.div
             className="absolute bottom-5 left-10 w-52 h-52 bg-[#e7d6b9] rounded-full mix-blend-lighten filter blur-2xl opacity-20"
