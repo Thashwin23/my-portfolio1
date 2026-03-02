@@ -25,12 +25,12 @@ export const portfolioData = {
     "Fullstack Developer",
   ],
   intro: `A passionate developer with ${calculateExperience(
-    "2024-04-29"
+    "2024-04-29",
   )} of experience building modern, responsive web applications using Next.js, React, and Tailwind CSS.`,
   profilePicture: "/assets/profilePhoto.jpg",
   cvPath: "/assets/thashwin-cs-resume.pdf",
   about: `My journey into web development began after graduating from St. Joseph Engineering College with a degree in ECE. A comprehensive 6-month course ignited my passion for coding, leading me to my current role. Now, with ${calculateExperience(
-    "2024-04-29"
+    "2024-04-29",
   )} of hands-on experience, I specialize in creating dynamic user interfaces with Next.js, React, and Ant Design, transforming ideas into seamless digital experiences.`,
   socials: {
     github: "https://github.com/Thashwin23",
@@ -46,8 +46,10 @@ export const portfolioData = {
       description: [
         "Contributed to a hyperlocal foodtech & offers e-commerce platform, focusing on the merchant dashboard, analytics, and real-time offer workflows.",
         "Developed for a large-scale dairytech distribution management system, building the admin dashboard, inventory, and dealer/order workflows.",
+        "Developed a secure, multi-step fintech onboarding UI featuring complex redirection logic for DigiLocker KYC verification and integrated an automated bank-linking interface for seamless SIP management.",
         "Engineered a conditional monitoring & analytics solution for the power supply department, creating equipment status visualizations and geospatial mapping.",
         "Designed and built responsive dashboards and UIs using Next.js, React, Tailwind CSS, Ant Design, Mapbox, and AntV Charts.",
+        "Designed and engineered a high-conversion landing page with a cinematic dark theme, featuring complex UI-side financial calculators for real-time investment projections.",
         "Led end-to-end frontend execution, including API integrations, workflow optimization, and complex logic implementation for efficiency.",
         "Collaborated with stakeholders to translate business needs into user-friendly digital solutions.",
         "Improved processing speeds by up to 60% and delivered high-performance, intuitive interfaces across multiple industries.",
