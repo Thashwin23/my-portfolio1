@@ -1,4 +1,4 @@
-import { GithubIcon, portfolioData } from "../data";
+import { portfolioData } from "../data";
 import { FaGithub } from "react-icons/fa";
 
 const ProjectCard = ({ project }) => (
