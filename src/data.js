@@ -25,10 +25,10 @@ export const portfolioData = {
     "Fullstack Developer",
   ],
   intro: `A passionate developer with ${calculateExperience(
-    "2024-04-29",
+    "2024-01-15",
   )} of experience building modern, responsive web applications using Next.js, React, and Tailwind CSS.`,
   profilePicture: "/assets/profilePhoto.jpg",
-  cvPath: "/assets/thashwin-cs-resume.pdf",
+  cvPath: "/assets/Thashwin_resume-new.pdf",
   about: `My journey into web development began after graduating from St. Joseph Engineering College with a degree in ECE. A comprehensive 6-month course ignited my passion for coding, leading me to my current role. Now, with ${calculateExperience(
     "2024-04-29",
   )} of hands-on experience, I specialize in creating dynamic user interfaces with Next.js, React, and Ant Design, transforming ideas into seamless digital experiences.`,
